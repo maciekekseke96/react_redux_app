@@ -22,7 +22,7 @@ const Product = ({ product }) => {
     <div className="product">
       <div className="productImg" style={productImgStyles}></div>
       <p className="productTitle">{product.title}</p>
-      <p className="productPrice">Price: {productPrice}</p>
+      <p className="productPrice">Price: <span>{productPrice}</span></p>
       <button className="addToCartBtn">ADD TO CART</button>
     </div>
   );
