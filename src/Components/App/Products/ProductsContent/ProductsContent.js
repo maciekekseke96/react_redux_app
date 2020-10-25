@@ -4,12 +4,13 @@ import Product from "./Product/Product";
 import { connect } from "react-redux";
 
 const ProductsContent = ({ products }) => {
-  console.log(products);
-  return <div className="productsContent">
-      {products.map((product)=>{
-        return <Product key={product.id} product={product} />
+  return (
+    <div className="productsContent">
+      {products.map((product) => {
+        return <Product key={product.id} product={product} />;
       })}
-  </div>;
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => ({

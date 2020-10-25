@@ -10,6 +10,14 @@ const INITIAL_STATE = {
     price: 129.99,
     currency: "PLN",
     quantity:1,
+  },{
+    id: 12,
+    title: "Call Of Duty Modern Warfare Zarąbiście długa nazwa",
+    cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1lvj.jpg",
+    availability: true,
+    price: 129.99,
+    currency: "PLN",
+    quantity:1,
   }],
 };
 
