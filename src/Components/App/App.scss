@@ -1,0 +1,9 @@
+@import "./../../styles/colors";
+
+.app {
+  min-width: 1200px;
+  max-width: 1200px;
+  min-height: 400px;
+  border: 1px solid black;
+  display: flex;
+}

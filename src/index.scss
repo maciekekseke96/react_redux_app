@@ -1,3 +1,10 @@
 @import "./styles/reset";
 @import "./styles/fonts";
 @import "./styles/colors";
+
+body {
+  padding-top: 20px;
+  background-color: #00687f;
+  display: flex;
+  justify-content: center;
+}

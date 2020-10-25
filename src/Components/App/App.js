@@ -1,19 +1,20 @@
 import React from "react";
-import { createStore } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import rootReducer from "./../../reducers";
+import Products from "./Products/Products";
+import Basket from "./Basket/Basket";
+import { connect } from "react-redux";
 import "./App.scss";
-
-const store = createStore(rootReducer, composeWithDevTools());
-
-window.store = store;
 
 function App() {
   return (
-    <div>
-      <h1>It Works</h1>
+    <div className="app">
+      <Products />
+      <Basket />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  products: state.products.items,
+});
+
+export default connect(mapStateToProps, {})(App);

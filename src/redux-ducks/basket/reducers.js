@@ -1,8 +1,16 @@
-import types from "./types"
+import types from "./types";
 
 const INITIAL_STATE = {
   listName: "Basket",
-  items: [],
+  items: [{
+    id: 11,
+    title: "Doom Eternal",
+    cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1lvj.jpg",
+    availability: true,
+    price: 129.99,
+    currency: "PLN",
+    quantity:1,
+  }],
 };
 
 const basketReducer = (state = INITIAL_STATE, action) => {
