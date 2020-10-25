@@ -2,8 +2,28 @@
 @import "./../../../../../styles/fonts";
 
 .product {
-  height: 180px;
-  width: 140px;
-  border: 1px solid black;
+  height: 350px;
+  width: 200px;
   margin: 10px;
+  background-color: #e0e6ee;
+  padding-top: 20px;
+  border-radius: 10%;
+  position: relative;
+  .productTitle {
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+  }
+  .productPrice {
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+  }
+  .addToCartBtn {
+    margin: 5px auto;
+    position: absolute;
+    bottom :10px;
+    left: 100px;
+    transform: translate(-50%,0);
+  }
 }

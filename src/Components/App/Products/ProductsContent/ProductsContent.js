@@ -7,7 +7,7 @@ const ProductsContent = ({ products }) => {
   console.log(products);
   return <div className="productsContent">
       {products.map((product)=>{
-        return <Product key={product.id} />
+        return <Product key={product.id} product={product} />
       })}
   </div>;
 };
