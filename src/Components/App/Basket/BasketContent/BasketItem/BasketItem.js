@@ -6,7 +6,7 @@ import "./BasketItem.scss";
 const BasketItem = ({ product, remove, stateBasket }) => {
   const basketItemImgStyles = {
     height: "100%",
-    width: "20%",
+    width: "30%",
     backgroundImage: `url(${product.cover})`,
     backgroundSize: "100% 100%",
     backgroundPosition: "center",
