@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
+import { basketActions } from "./../../../../../redux-ducks/basket/index";
 import "./Product.scss";
 
-const Product = ({ product }) => {
+const Product = ({ product, add, stateBasket }) => {
   const productImgStyles = {
     height: "60%",
     width: "80%",
@@ -18,14 +20,34 @@ const Product = ({ product }) => {
   } else {
     productPrice = "Unknown";
   }
+  const productToSend = {
+    ...product,
+    quantity: 1,
+  };
+  const addProductToCart = (event) => {
+    event.preventDefault();
+    add({ productToSend, stateBasket });
+  };
   return (
     <div className="product">
       <div className="productImg" style={productImgStyles}></div>
       <p className="productTitle">{product.title}</p>
-      <p className="productPrice">Price: <span>{productPrice}</span></p>
-      <button className="addToCartBtn">ADD TO CART</button>
+      <p className="productPrice">
+        Price: <span>{productPrice}</span>
+      </p>
+      <button onClick={addProductToCart} className="addToCartBtn">
+        ADD TO CART
+      </button>
     </div>
   );
 };
 
-export default Product;
+const mapStateToProps = (state) => ({
+  stateBasket: state.basket,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  add: (product) => dispatch(basketActions.add(product)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
