@@ -2,7 +2,7 @@
 @import "./../../../styles/fonts";
 
 .basketContainer {
-  @media (min-width: 1201px) {
+  @media (min-width: 1001px) {
     width: 40%;
     min-height: 400px;
     border: 1px solid black;
@@ -13,7 +13,7 @@
       font-family: "Ubuntu", sans-serif;
     }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     width: 100%;
     min-height: 400px;
     border: 1px solid black;
