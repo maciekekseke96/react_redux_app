@@ -6,3 +6,13 @@
   display: flex;
   flex-direction: column;
 }
+.noData {
+  margin-top: 30px;
+  padding-top: 30px;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
