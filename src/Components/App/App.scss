@@ -1,9 +1,17 @@
 @import "./../../styles/colors";
 
 .app {
-  min-width: 1200px;
-  max-width: 1200px;
-  min-height: 400px;
-  border: 1px solid black;
-  display: flex;
+  @media (min-width: 1201px) {
+    min-width: 1200px;
+    max-width: 1200px;
+    min-height: 400px;
+    border: 1px solid black;
+    display: flex;
+  }
+  @media (max-width: 1200px) {
+    min-width: 90vw;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
 }
